@@ -9,3 +9,4 @@ urlpatterns = [
     path('toggle_complete/<int:pk>/', toggle_complete, name='toggle_complete'),
 ]
 
+
