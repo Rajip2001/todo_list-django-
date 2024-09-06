@@ -1,12 +1,14 @@
-# todos/urls.py
+from django.contrib import admin
 from django.urls import path
-from .views import todo_list, edit_todo, delete_todo, toggle_complete
+from todos.views import home , login , signup , add_todo , signout , delete_todo, change_todo
+
 
 urlpatterns = [
-    path('', todo_list, name='todo_list'),
-    path('edit/<int:pk>/', edit_todo, name='edit_todo'),
-    path('delete/<int:pk>/', delete_todo, name='delete_todo'),
-    path('toggle_complete/<int:pk>/', toggle_complete, name='toggle_complete'),
+   path('' , home , name='home' ), 
+   path('login/' ,login  , name='login'), 
+   path('signup/' , signup ), 
+   path('add-todo/' , add_todo ), 
+   path('delete-todo/<int:id>' , delete_todo ), 
+   path('change-status/<int:id>/<str:status>' , change_todo ), 
+   path('logout/' , signout ), 
 ]
-
-
