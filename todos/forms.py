@@ -1,8 +1,7 @@
-# todos/forms.py
-from django import forms
-from .models import ToDo
+from django.forms import ModelForm
 
-class ToDoForm(forms.ModelForm):
+from todos.models import TODO
+class TODOForm(ModelForm):
     class Meta:
-        model = ToDo
-        fields = ['title', 'description', 'completed']
+        model = TODO
+        fields = ['title' , 'status' , 'priority']
